@@ -46,4 +46,18 @@ para obter o valor
 @Qualifier("applicationName")
 private String applicationName;
 
+IoC -> inversion of control
+delegar configurações, conexão de banco de dados, entre outros
+uma instancia para a mesma aplicação (Singleton) e deixa disponivel para ser injetado na aplicação
+
+Container IoC
+@Configuration (@Bean) e @Component (@Controller, @Service e @Repository)
+
+@ComponentScan(basePackages= {"io.github.dougllasfps", "com.umaoutrabiblioteca.projeto"}) 
+configuração para scanear pacote 
+
+Injeção de dependencia -> padrão que delega a outros a responsabilidade (outra classe ou container) de instanciar e disponibilizar o objeto
+
+
+
 
