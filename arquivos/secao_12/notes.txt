@@ -1,0 +1,19 @@
+minicurso de git
+git init
+git add .
+git status
+git commit -m "Commit inicial"
+
+criar repositório remoto no github (curso-git-rapido)
+
+git remote add origin https://github.com/<usuario>/curso-git-rapido
+origin -> nome do repositório
+
+git remote -v -> mostra os repositórios remotos
+
+git push origin master
+
+baixar do github
+git clone https://github.com/<usuario>/curso-git-rapido
+
+fluxo -> init, commit, pull e push

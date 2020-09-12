@@ -1,0 +1,9 @@
+link das ferramentas
+https://drive.google.com/drive/folders/1p3Hfxo4PcbqwlP4sA5CiObrSQN2CiupG
+
+java: https://www.oracle.com/java/technologies/javase-jdk8-downloads.html
+intellij: https://www.jetbrains.com/idea/download/
+mysql: https://dev.mysql.com/downloads/installer/
+postman: https://www.postman.com/downloads/
+maven: https://maven.apache.org/download.cgi
+

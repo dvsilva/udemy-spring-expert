@@ -1,0 +1,49 @@
+criar projeto
+
+adicionar dependencia parent spring-boot-starter-parent
+adicionar dependencia spring-boot-starter
+configurar build do spring boot
+
+criar classe application
+
+@SpringBootApplication
+public class VendasApplication {
+	public static void main(String[] args) {
+        	SpringApplication.run(VendasApplication.class, args);
+    	}
+}
+
+adicionar dependencia web
+<dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+
+adicionar anotação na classe VendasApplication @RestController
+criar método para retornar resposta
+
+@GetMapping("/hello")
+public String helloWorld(){
+    return applicationName;
+}
+
+spring boot starters
+parent + starter - básico para funcionar
+outros
+spring-boot-starter: data-jpa, security, test
+
+configuração no contexto da aplicação
+
+@Configuration -> na classe
+
+@Bean(name="applicationName")
+public String applicationName(){
+	return "Sistema de vendas";
+}
+
+para obter o valor
+@Autowired
+@Qualifier("applicationName")
+private String applicationName;
+
+
