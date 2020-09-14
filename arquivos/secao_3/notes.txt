@@ -1,0 +1,12 @@
+arquivo resources data.sql é executado toda vez que a aplicação sobe
+
+@Repository -> traduz exceções do banco de dados
+@Component -> não faz isso
+
+JdbcTemplate -> ja vem com a conexão / permite fazer operações no bd
+
+mostrar log do sql -> adicionar no application properties
+spring.jpa.properties.hibernate.show_sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+@Modifying -> anotacao do repositorio para executar uma ação no banco

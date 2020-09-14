@@ -1,0 +1,3 @@
+RestFulAPI com SpringBoot
+
+@RequiredArgsConstructor -> cria construtor com atributos obrigatórios (final)
