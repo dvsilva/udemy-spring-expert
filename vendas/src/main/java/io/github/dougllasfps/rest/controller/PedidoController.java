@@ -1,11 +1,15 @@
 package io.github.dougllasfps.rest.controller;
 
-import static org.springframework.http.HttpStatus.*;
+import static org.springframework.http.HttpStatus.CREATED;
+import static org.springframework.http.HttpStatus.NOT_FOUND;
+import static org.springframework.http.HttpStatus.NO_CONTENT;
 
 import java.time.format.DateTimeFormatter;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import javax.validation.Valid;
 
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +24,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import io.github.dougllasfps.domain.entity.ItemPedido;
 import io.github.dougllasfps.domain.entity.Pedido;
-import io.github.dougllasfps.domain.entity.StatusPedido;
+import io.github.dougllasfps.domain.entity.enums.StatusPedido;
 import io.github.dougllasfps.rest.dto.AtualizacaoStatusPedidoDTO;
 import io.github.dougllasfps.rest.dto.InformacaoItemPedidoDTO;
 import io.github.dougllasfps.rest.dto.InformacoesPedidoDTO;
@@ -39,7 +43,7 @@ public class PedidoController {
 
 	@PostMapping
 	@ResponseStatus(CREATED)
-	public Integer save(@RequestBody PedidoDTO dto) {
+	public Integer save(@RequestBody @Valid PedidoDTO dto) {
 		Pedido pedido = service.salvar(dto);
 		return pedido.getId();
 	}

@@ -12,7 +12,7 @@ import io.github.dougllasfps.domain.entity.Cliente;
 import io.github.dougllasfps.domain.entity.ItemPedido;
 import io.github.dougllasfps.domain.entity.Pedido;
 import io.github.dougllasfps.domain.entity.Produto;
-import io.github.dougllasfps.domain.entity.StatusPedido;
+import io.github.dougllasfps.domain.entity.enums.StatusPedido;
 import io.github.dougllasfps.domain.repository.Clientes;
 import io.github.dougllasfps.domain.repository.ItemsPedido;
 import io.github.dougllasfps.domain.repository.Pedidos;
