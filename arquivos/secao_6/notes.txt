@@ -1,0 +1,9 @@
+spring security e JSON Web Token (JWT)
+
+adicionar dependencia do spring security
+<dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+
+JWT -> header + payload (conteudo customizado) + assinatura de verificação

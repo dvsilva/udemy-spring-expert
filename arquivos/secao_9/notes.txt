@@ -1,0 +1,49 @@
+comando para gerar o jar da app
+mvn clean package
+
+rodar o jar
+cd target
+java -jar vendas-1.0-SNAPSHOT.jar
+
+gerar um WAR
+editar arquivo pom.xml
+<packaging>war</packaging>
+
+adicionar dependencia do tomcat
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-tomcat</artifactId>
+	<scope>provided</scope>
+</dependency>
+
+extender a classe principal VendasApplication
+public class VendasApplication extends SpringBootServletInitializer
+
+profiles mavem para builds diferentes
+
+configurar profiles no pom.xml
+
+<profiles>
+	<profile>
+		<activation>
+			<activeByDefault>true</activeByDefault>
+		</activation>
+		<id>desenvolvimento</id>
+		<properties>
+			<project.packaging>jar</project.packaging>
+			<tomcat.scope>compile</tomcat.scope>
+		</properties>
+	</profile>
+
+	<profile>
+		<id>producao</id>
+		<properties>
+			<project.packaging>war</project.packaging>
+			<tomcat.scope>provided</tomcat.scope>
+		</properties>
+	</profile>
+</profiles>
+
+comando para gerar o jar da app
+mvn clean package -P desenvolvimento
+mvn clean package -P producao
